@@ -1,0 +1,53 @@
+#include <stdio.h>
+int main()
+	{
+	int DeviceType;
+	int SymptomCode;
+	printf("Enter device type (1 for laptop, 2 for smartphone, 3 for router): ");
+	scanf("%d",&DeviceType);
+	switch(DeviceType)
+	{
+		case 1: 
+		printf("\nEnter 10 if your device won't turn on, 11 if it's overheating, and 12 if it has slow performance: ");
+		scanf("%d", &SymptomCode);
+		switch(SymptomCode)
+		{
+			case 10: printf("\nCheck power adapter and battery connections. Try a different power outlet. Remove battery and hold power button for 30 seconds.");
+			break;
+			case 11: printf("\nClean fans and ensure proper ventilation. Check for dust accumulation. Use a cooling pad. Monitor CPU usage.");
+			break;
+			case 12: printf("\nRun system diagnostics and check resource usage. Scan for malware. Upgrade RAM if necessary. Defragment hard drive.");
+			break;
+		}
+		break;
+		case 2:
+		printf("\nEnter 20 if your battery drains fast, 21 if it has no signal, and 22 if the touchscreen is unresponsive: ");
+		scanf("%d", &SymptomCode);
+		switch(SymptomCode)
+		{
+			case 20: printf("\nRun battery calibration tool and check for background apps. Reduce screen brightness. Disable unnecessary connectivity features.");
+			break;
+			case 21: printf("\nCheck SIM card and network settings. Toggle airplane mode. Update carrier settings. Check for network outages.");
+			break;
+			case 22: printf("\nPerform screen calibration test. Clean screen surface. Restart device. Check for software updates.");
+			break;
+		}
+		
+		break;
+		case 3: 
+		printf("\nEnter 30 if it has no internet connection, 31 if the wifi signal is weak, and 32 if the device can't connect: ");
+		scanf("%d", &SymptomCode);
+		switch(SymptomCode)
+		{
+			case 30: printf("\nCheck ISP status and router cables. Restart modem and router. Check WAN connection settings. Verify internet subscription.");
+			break;
+			case 31: printf("\nReposition router and check antenna connections. Reduce interference from other devices. Change Wi-Fi channel. Consider range extender.");
+			break;
+			case 32: printf("\nCheck MAC filtering and DHCP settings. Verify Wi-Fi password. Restart connecting device. Check for IP conflicts.");
+			break;
+		}
+		break;
+	}
+		
+		return 0;
+	}
